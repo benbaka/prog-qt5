@@ -1,4 +1,5 @@
-SUBDIRS = window
+SUBDIRS = pushbutton \
+	  window
 
 all: 
 	for d in $(SUBDIRS); do \
