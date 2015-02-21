@@ -1,4 +1,5 @@
 SUBDIRS = pushbutton \
+	  quitbutton \
 	  window
 
 all: 
