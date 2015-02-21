@@ -9,8 +9,6 @@
 
 #include <QtWidgets>
 
-class QPushButton;
-
 /* 
  * Application window class
  */
