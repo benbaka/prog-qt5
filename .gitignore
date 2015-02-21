@@ -28,3 +28,6 @@
 *.app
 
 .*.swp
+QMakefile
+moc_*.cpp
+*.pro
