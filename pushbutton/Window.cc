@@ -30,5 +30,5 @@ Window::Window(QWidget *parent) : QWidget(parent)
  */
 void Window::onButtonClicked()
 {
-    std::cout << "Button was clicked" << std::endl;
+    QMessageBox::information(this, "Click", "The button was clicked.");
 }
