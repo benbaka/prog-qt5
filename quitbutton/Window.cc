@@ -16,6 +16,7 @@ Window::Window(QWidget* parent) : QWidget(parent)
 {
     QHBoxLayout* layout = new QHBoxLayout;
     this->setLayout(layout);
+    this->setContentsMargins(6, 6, 6, 6);
 
     quitButton = new QPushButton("&Quit");
     connect(quitButton, SIGNAL(clicked()), qApp, SLOT(quit()));

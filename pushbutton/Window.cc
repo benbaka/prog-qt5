@@ -18,6 +18,7 @@ Window::Window(QWidget *parent) : QWidget(parent)
     // Set the layout manager
     QVBoxLayout* layout = new QVBoxLayout;
     this->setLayout(layout);
+    this->setContentsMargins(6, 6, 6, 6);
 
     // Create the button and add it to the layout
     button = new QPushButton("Click me");
