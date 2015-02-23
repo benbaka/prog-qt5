@@ -1,4 +1,5 @@
-SUBDIRS = pushbutton \
+SUBDIRS = click-counter \
+	  pushbutton \
 	  quitbutton \
 	  window
 
