@@ -1,6 +1,6 @@
 QMAKE = qmake
 QMAKEFILE = QMakefile
-PROJECT = window.pro
+PROJECT = $(notdir $(CURDIR)).pro
 
 all: $(QMAKEFILE)
 	make -f $(QMAKEFILE)

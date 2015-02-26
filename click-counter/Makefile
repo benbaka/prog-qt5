@@ -1,6 +1,6 @@
 QMAKE = qmake
 QMAKEFILE = QMakefile
-PROJECT = click-counter.pro
+PROJECT = $(notdir $(CURDIR)).pro
 
 all: $(QMAKEFILE)
 	make -f $(QMAKEFILE)

@@ -1,6 +1,6 @@
 QMAKE = qmake
 QMAKEFILE = QMakefile
-PROJECT = pushbutton.pro
+PROJECT = $(notdir $(CURDIR)).pro
 
 all: $(QMAKEFILE)
 	make -f $(QMAKEFILE)
