@@ -1,8 +1,9 @@
 QMAKE = qmake
 QMAKEFILE = QMakefile
-PROJECT = $(notdir $(CURDIR)).pro
+APP := $(notdir $(CURDIR))
+PROJECT = $(APP).pro
 
-all: $(QMAKEFILE)
+all: $(QMAKEFILE) .gitignore
 	make -f $(QMAKEFILE)
 
 $(QMAKEFILE): $(PROJECT)
@@ -20,3 +21,5 @@ distclean: clean
 	rm -f $(QMAKEFILE)
 	rm -f $(PROJECT)
 
+.gitignore:
+	test -f .gitignore || echo $(APP) > .gitignore
