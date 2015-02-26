@@ -1,4 +1,5 @@
 SUBDIRS = click-counter \
+	  lcd-slider \
 	  pushbutton \
 	  quitbutton \
 	  window
