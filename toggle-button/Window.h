@@ -22,6 +22,7 @@ class Window : public QWidget
 
     private slots:
         void onButtonToggled(bool);
+        void onButtonClicked();
 };
 
 #endif // WINDOW_H

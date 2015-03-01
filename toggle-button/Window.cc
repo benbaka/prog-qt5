@@ -13,6 +13,7 @@ Window::Window(QWidget* parent) : QWidget(parent)
     this->setContentsMargins(6, 6, 6, 6);
 
     button = new QPushButton("Click me");
+    connect(button, SIGNAL(clicked()), this, SLOT(onButtonClicked()));
     layout->addWidget(button);
 
     toggleButton = new QPushButton("Toggle me");
@@ -25,4 +26,10 @@ Window::Window(QWidget* parent) : QWidget(parent)
 void Window::onButtonToggled(bool state)
 {
     button->setEnabled(!state);
+}
+
+void Window::onButtonClicked()
+{
+    QMessageBox::information(this, "Click", 
+            "The button was clicked so it is enabled.");
 }
