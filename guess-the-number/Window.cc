@@ -44,12 +44,21 @@ QWidget* Window::makeGuessWidget()
     connect(m_guessButton, SIGNAL(clicked()), this, SLOT(onButtonClicked()));
     layout->addWidget(m_guessButton);
 
+    m_cheatButton = new QPushButton("Cheat :)");
+    connect(m_guessButton, SIGNAL(clicked()), this, SLOT(onCheatClicked()));
+    layout->addWidget(m_cheatButton);
+
     return widget;
 } 
 
 void Window::onButtonClicked()
 {
     m_game->guess(m_guessEdit->text().toInt());
+}
+
+void Window::onCheatClicked()
+{
+    m_game->enableCheatMode();
 }
 
 void Window::onGuess(int count)

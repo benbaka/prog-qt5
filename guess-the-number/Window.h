@@ -23,11 +23,12 @@ class Window : public QWidget
         QLCDNumber* m_scoreBoard;
         QLineEdit* m_guessEdit;
         QPushButton* m_guessButton;
-
+        QPushButton* m_cheatButton;
         QWidget* makeGuessWidget();
 
     private slots:
         void onButtonClicked();
+        void onCheatClicked();
         void onGuess(int n);
         void onGuessTooHigh(int n);
         void onGuessTooLow(int n);
