@@ -76,6 +76,7 @@ void Window::onGuessCorrect(int guess)
 void Window::onGameOver()
 {
     QMessageBox::information(this, "You win!", "Not too bad");
+    m_guessButton->setEnabled(false);
 }
 
 void Window::onCheat()
