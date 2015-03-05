@@ -88,6 +88,9 @@ void Window::onGameOver()
     m_guessButton->setEnabled(false);
 }
 
-void Window::onCheat(int cheat)
-{}
+void Window::onCheat(int secret)
+{
+    QMessageBox::information(this, "Cheat", QString::number(secret));
+    m_cheatButton->setEnabled(false);
+}
 
