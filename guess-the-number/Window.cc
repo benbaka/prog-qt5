@@ -45,7 +45,7 @@ QWidget* Window::makeGuessWidget()
     layout->addWidget(m_guessButton);
 
     m_cheatButton = new QPushButton("Cheat :)");
-    connect(m_guessButton, SIGNAL(clicked()), this, SLOT(onCheatClicked()));
+    connect(m_cheatButton, SIGNAL(clicked()), this, SLOT(onCheatClicked()));
     layout->addWidget(m_cheatButton);
 
     return widget;
