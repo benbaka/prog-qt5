@@ -4,6 +4,7 @@ SUBDIRS = click-counter \
 	  lcd-slider \
 	  lcd-sliders \
 	  pushbutton \
+	  pushbutton-lambda \
 	  quitbutton \
 	  toggle-button \
 	  window
