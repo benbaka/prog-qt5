@@ -55,6 +55,7 @@ void Window::onButtonClicked()
 void Window::onGuess(int count)
 {
     m_scoreBoard->display(count);
+    m_guessEdit->setText("");
 }
 
 void Window::onGuessTooHigh(int guess)
