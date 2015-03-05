@@ -79,6 +79,6 @@ void Window::onGameOver()
     m_guessButton->setEnabled(false);
 }
 
-void Window::onCheat()
+void Window::onCheat(int cheat)
 {}
 

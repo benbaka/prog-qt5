@@ -33,7 +33,7 @@ class Window : public QWidget
         void onGuessTooLow(int n);
         void onGuessCorrect(int n);
         void onGameOver();
-        void onCheat();
+        void onCheat(int secret);
 };
 
 #endif // WINDOW_H
