@@ -22,7 +22,7 @@ Window::Window(QWidget *parent) : QWidget(parent)
 
     // Create the button and add it to the layout
     button = new QPushButton("Click me");
-    connect(button, SIGNAL(clicked()), this, SLOT(onButtonClicked()));
+    connect(button, &QPushButton::clicked, this, &Window::onButtonClicked);
     layout->addWidget(button);
 }
 
