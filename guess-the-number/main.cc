@@ -8,7 +8,7 @@ int main(int argc, char* argv[])
 
     Window win;
     win.setWindowTitle("Guess the Number");
-    win.resize(250, 350);
+    win.resize(350, 350);
     win.show();
 
     return app.exec();
