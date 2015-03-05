@@ -1,5 +1,6 @@
 SUBDIRS = click-counter \
 	  click-counters \
+	  guess-the-number \
 	  lcd-slider \
 	  lcd-sliders \
 	  pushbutton \
