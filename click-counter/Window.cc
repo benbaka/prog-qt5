@@ -23,11 +23,10 @@ Window::Window(QWidget* parent) : QWidget(parent)
     layout->addWidget(lcd);
 
     button = new QPushButton("Click me!");
-    connect(button, SIGNAL(clicked()), this, SLOT(onButtonClicked()));
     layout->addWidget(button);
-}
 
-void Window::onButtonClicked()
-{
-    lcd->display(lcd->intValue() + 1);
+    connect(button, &QPushButton::clicked, [this]()
+    {
+        lcd->display(lcd->intValue() + 1);
+    });
 }
