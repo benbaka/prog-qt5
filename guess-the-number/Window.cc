@@ -38,6 +38,7 @@ QWidget* Window::makeGuessWidget()
     widget->setLayout(layout);
 
     m_guessEdit = new QLineEdit;
+    m_guessEdit->setValidator(new QIntValidator(0, 100));
     layout->addWidget(m_guessEdit);
 
     m_guessButton = new QPushButton("Guess!");
