@@ -15,8 +15,8 @@ class Window : public QWidget
         Window(QWidget* parent=0);
 
     private:
-        QPushButton* button;
-        QLCDNumber* lcd;
+        QPushButton* m_button;
+        QLCDNumber* m_lcd;
 };
 
 #endif // WINDOW_H

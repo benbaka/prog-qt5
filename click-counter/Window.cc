@@ -19,14 +19,14 @@ Window::Window(QWidget* parent) : QWidget(parent)
     this->setContentsMargins(6, 6, 6, 6);
     this->resize(320, 200);
 
-    lcd = new QLCDNumber(3);
-    layout->addWidget(lcd);
+    m_lcd = new QLCDNumber(3);
+    layout->addWidget(m_lcd);
 
-    button = new QPushButton("Click me!");
-    layout->addWidget(button);
+    m_button = new QPushButton("Click me!");
+    layout->addWidget(m_button);
 
-    connect(button, &QPushButton::clicked, [this]()
+    connect(m_button, &QPushButton::clicked, [this]()
     {
-        lcd->display(lcd->intValue() + 1);
+        m_lcd->display(m_lcd->intValue() + 1);
     });
 }
