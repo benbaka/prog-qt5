@@ -12,7 +12,6 @@ $(QMAKEFILE): $(PROJECT)
 $(PROJECT):
 	$(QMAKE) -project
 	echo "QT += widgets" >> $(PROJECT)
-	echo "CONFIG += c++11" >> $(PROJECT)
 
 clean: $(QMAKEFILE)
 	make -f $(QMAKEFILE) clean
