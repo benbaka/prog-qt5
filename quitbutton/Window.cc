@@ -19,6 +19,7 @@ Window::Window(QWidget* parent) : QWidget(parent)
     this->setContentsMargins(6, 6, 6, 6);
 
     quitButton = new QPushButton("&Quit");
-    connect(quitButton, SIGNAL(clicked()), qApp, SLOT(quit()));
+    connect(quitButton, &QPushButton::clicked, qApp, &QApplication::quit);
+
     layout->addWidget(quitButton);
 }
