@@ -22,10 +22,19 @@ Window::Window(QWidget *parent) : QWidget(parent)
 
     // Create the button and add it to the layout
     button = new QPushButton("Click me");
-    connect(button, &QPushButton::clicked, this, &Window::onButtonClicked);
     layout->addWidget(button);
+
+#if __cplusplus < 201103
+    connect(button, &QPushButton::clicked, this, &Window::onButtonClicked);
+#else
+    connect(button, &QPushButton::clicked, this, [this]()
+    {
+        QMessageBox::information(this, "Click", "The button was clicked.");
+    }); 
+#endif
 }
 
+#if __cplusplus < 201103
 /*
  * Called when the button is clicked
  */
@@ -33,3 +42,4 @@ void Window::onButtonClicked()
 {
     QMessageBox::information(this, "Click", "The button was clicked.");
 }
+#endif

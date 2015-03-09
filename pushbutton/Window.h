@@ -22,8 +22,10 @@ class Window : public QWidget
     private:
         QPushButton* button;
 
+#if __cplusplus < 201103
     private slots:
         void onButtonClicked();
+#endif
 };
 
 #endif // WINDOW_H
