@@ -25,8 +25,19 @@ Window::Window(QWidget* parent) : QWidget(parent)
     m_button = new QPushButton("Click me!");
     layout->addWidget(m_button);
 
+#if __cplusplus > 201100
     connect(m_button, &QPushButton::clicked, [this]()
     {
         m_lcd->display(m_lcd->intValue() + 1);
     });
+#else
+    connect(m_button, &QPushButton::clicked, this, &Window::onButtonClicked);
+#endif
 }
+
+#if __cplusplus < 201100
+void Window::onButtonClicked()
+{
+    m_lcd->display(m_lcd->intValue() + 1);
+}
+#endif

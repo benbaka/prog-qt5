@@ -11,12 +11,19 @@
 
 class Window : public QWidget
 {
+    Q_OBJECT
+
     public:
         Window(QWidget* parent=0);
 
     private:
         QPushButton* m_button;
         QLCDNumber* m_lcd;
+
+#if __cplusplus < 201103
+    private slots:
+        void onButtonClicked();
+#endif
 };
 
 #endif // WINDOW_H
